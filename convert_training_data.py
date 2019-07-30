@@ -41,11 +41,10 @@ def find_missing_frames():
                         missing_frames.add(current_frame+i)
                 current_frame = int(row[0])
     
-    #add last frame
+
     missing_frames.add(current_frame+1)
 
     print(sorted(missing_frames))
-    #TODO add last+1 
     return sorted(missing_frames), first_frame, total
 
 def find_largest_batch(missing_frames_array, first_frame):
